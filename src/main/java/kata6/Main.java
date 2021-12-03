@@ -8,7 +8,7 @@ package kata6;
 import java.util.Scanner;
 import toys.Car;
 import toys.Helicopter;
-import toys.SerialNumberGenerator;
+import toys.ToyBusiness;
 
 /**
  *
@@ -16,22 +16,18 @@ import toys.SerialNumberGenerator;
  */
 public class Main {
     public static void main(String[] args) {
-        SerialNumberGenerator serialNumberGenerator = new SerialNumberGenerator();
+        ToyBusiness toyBusiness = new ToyBusiness();
         while(true){
-            System.out.println("Introduce command ('exit for exit')");
+            System.out.println("Introduce command:                        ('exit for exit')");
             Scanner scanner = new Scanner(System.in);
             String nextLine = scanner.nextLine();
             
             if(nextLine.equals("exit")){
                 break;
             }else if(nextLine.equals("car")){
-                Car car = new Car(serialNumberGenerator.next());
-                car.pack();
-                car.label();
+                toyBusiness.createCar();
             }else if(nextLine.equals("helicopter")){
-                Helicopter car = new Helicopter(serialNumberGenerator.next());
-                car.pack();
-                car.label();
+                toyBusiness.createHelicopter();
             }else {
                 System.out.println("Command unknown");
             }
