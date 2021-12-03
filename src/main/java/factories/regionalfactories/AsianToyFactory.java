@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package branches;
+package factories.regionalfactories;
 
 import business.ToyBusiness;
+import factories.ToyFactory;
 import toyproducts.Toy;
 import toyproducts.models.AsianCarToy;
 import toyproducts.models.AsianHelicopterToy;
@@ -14,21 +15,15 @@ import toyproducts.models.AsianHelicopterToy;
  *
  * @author Admin
  */
-public class AsianToyBusiness extends ToyBusiness {
+public class AsianToyFactory extends ToyFactory {
 
     @Override
     public Toy createToy(String type) {
         switch (type){
-            case("car"): 
-                AsianCarToy car = new AsianCarToy(serialNumberGenerator.next());
-                car.pack();
-                car.label();
-                return car;
+            case("car"):
+                return new AsianCarToy(serialNumberGenerator.next());
             case("helicopter"):
-                AsianHelicopterToy helicopter = new AsianHelicopterToy(serialNumberGenerator.next());
-                helicopter.pack();
-                helicopter.label();
-                return helicopter;
+                return new AsianHelicopterToy(serialNumberGenerator.next());
             default: 
                 return null;
         }

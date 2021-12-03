@@ -5,7 +5,10 @@
  */
 package kata6;
 
-import branches.AsianToyBusiness;
+import business.ToyBusiness;
+import factories.ToyFactory;
+import factories.regionalfactories.AmericanToyFactory;
+import factories.regionalfactories.AsianToyFactory;
 import java.util.Scanner;
 
 /**
@@ -14,7 +17,8 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        AsianToyBusiness toyBusiness = new AsianToyBusiness();
+        ToyFactory toyFactory = new AmericanToyFactory();
+        ToyBusiness toyBusiness = new ToyBusiness(toyFactory);
         while(true){
             System.out.println("Introduce command:                        ('exit for exit')");
             Scanner scanner = new Scanner(System.in);
@@ -23,9 +27,9 @@ public class Main {
             if(nextLine.equals("exit")){
                 break;
             }else if(nextLine.equals("car")){
-                toyBusiness.createToy(nextLine);
+                toyBusiness.produceToy(nextLine);
             }else if(nextLine.equals("helicopter")){
-                toyBusiness.createToy(nextLine);
+                toyBusiness.produceToy(nextLine);
             }else {
                 System.out.println("Command unknown");
             }
