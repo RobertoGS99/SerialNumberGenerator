@@ -7,6 +7,7 @@ package kata6;
 
 import java.util.Scanner;
 import toys.Car;
+import toys.Helicopter;
 import toys.SerialNumberGenerator;
 
 /**
@@ -28,7 +29,7 @@ public class Main {
                 car.pack();
                 car.label();
             }else if(nextLine.equals("helicopter")){
-                Car car = new Car(serialNumberGenerator.next());
+                Helicopter car = new Helicopter(serialNumberGenerator.next());
                 car.pack();
                 car.label();
             }else {
