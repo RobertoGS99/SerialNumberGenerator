@@ -2,11 +2,11 @@ package toyproducts.models;
 
 import toyproducts.Toy;
 
-public class CarToy implements Toy {
+public class AmericanCarToy implements Toy {
     private final Integer serialNumber;
     private final String type = "Car";
     
-    public CarToy(Integer serialNumber) {
+    public AmericanCarToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
     

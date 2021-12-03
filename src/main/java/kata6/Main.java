@@ -5,10 +5,8 @@
  */
 package kata6;
 
+import branches.AsianToyBusiness;
 import java.util.Scanner;
-import toyproducts.models.CarToy;
-import toyproducts.models.HelicopterToy;
-import toys.ToyBusiness;
 
 /**
  *
@@ -16,7 +14,7 @@ import toys.ToyBusiness;
  */
 public class Main {
     public static void main(String[] args) {
-        ToyBusiness toyBusiness = new ToyBusiness();
+        AsianToyBusiness toyBusiness = new AsianToyBusiness();
         while(true){
             System.out.println("Introduce command:                        ('exit for exit')");
             Scanner scanner = new Scanner(System.in);
