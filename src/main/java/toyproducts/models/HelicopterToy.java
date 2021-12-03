@@ -1,10 +1,12 @@
-package toys;
+package toyproducts.models;
 
-public class Helicopter {
+import toyproducts.Toy;
+
+public class HelicopterToy implements Toy {
     private final Integer serialNumber;
     private final String type = "Helicopter";
     
-    public Helicopter(Integer serialNumber) {
+    public HelicopterToy(Integer serialNumber) {
         this.serialNumber = serialNumber;
     }
     

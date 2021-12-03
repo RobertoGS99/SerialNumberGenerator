@@ -6,8 +6,8 @@
 package kata6;
 
 import java.util.Scanner;
-import toys.Car;
-import toys.Helicopter;
+import toyproducts.models.CarToy;
+import toyproducts.models.HelicopterToy;
 import toys.ToyBusiness;
 
 /**
@@ -25,9 +25,9 @@ public class Main {
             if(nextLine.equals("exit")){
                 break;
             }else if(nextLine.equals("car")){
-                toyBusiness.createCar();
+                toyBusiness.createToy(nextLine);
             }else if(nextLine.equals("helicopter")){
-                toyBusiness.createHelicopter();
+                toyBusiness.createToy(nextLine);
             }else {
                 System.out.println("Command unknown");
             }
