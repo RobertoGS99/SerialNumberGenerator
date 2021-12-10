@@ -18,8 +18,8 @@ import toyproducts.models.AmericanHelicopterToy;
 public class AmericanCarToyFactory extends ToyFactory{
 
     @Override
-    public Toy createToy(Integer serialNumber) {
-        return new AmericanCarToy(serialNumber);
+    public Toy createToy() {
+        return new AmericanCarToy();
          
     }
     

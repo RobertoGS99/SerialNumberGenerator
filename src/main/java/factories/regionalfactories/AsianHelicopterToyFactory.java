@@ -18,8 +18,8 @@ import toyproducts.models.AsianHelicopterToy;
 public class AsianHelicopterToyFactory extends ToyFactory {
 
     @Override
-    public Toy createToy(Integer serialNumber) {   
-        return new AsianHelicopterToy(serialNumber);
+    public Toy createToy() {   
+        return new AsianHelicopterToy();
  
     }
     

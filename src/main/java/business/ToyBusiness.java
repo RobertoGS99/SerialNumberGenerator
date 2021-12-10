@@ -8,15 +8,13 @@ import toyproducts.Toy;
 
 public class ToyBusiness {
     private Map<String,ToyFactory> factories;
-    private final SerialNumberGenerator sn;
 
     public ToyBusiness(){
-        this.sn = new SerialNumberGenerator();
         this.factories = new HashMap();
     }
     
     public Toy produceToy(String type){
-        return factories.get(type).produceToy(sn.next());
+        return factories.get(type).produceToy();
     }
 
     public void add(String type, ToyFactory toyFactory) {
