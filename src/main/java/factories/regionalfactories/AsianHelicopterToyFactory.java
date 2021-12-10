@@ -15,18 +15,12 @@ import toyproducts.models.AsianHelicopterToy;
  *
  * @author Admin
  */
-public class AsianToyFactory extends ToyFactory {
+public class AsianHelicopterToyFactory extends ToyFactory {
 
     @Override
-    public Toy createToy(String type) {
-        switch (type){
-            case("car"):
-                return new AsianCarToy(serialNumberGenerator.next());
-            case("helicopter"):
-                return new AsianHelicopterToy(serialNumberGenerator.next());
-            default: 
-                return null;
-        }
+    public Toy createToy(Integer serialNumber) {   
+        return new AsianHelicopterToy(serialNumber);
+ 
     }
     
 }
